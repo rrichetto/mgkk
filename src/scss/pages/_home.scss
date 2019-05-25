@@ -1,0 +1,50 @@
+.home {
+  position: relative;
+  height: 100vh;
+  // background-color: rgba($color-primary, 0.6);
+  color: $color-white;
+
+  background-image: linear-gradient(to right bottom,
+                    rgba(126, 85, 189, .95) 0%,
+                    rgba(126, 85, 189, .85) 30%,
+                    rgba(45, 162, 197, 0.4)),
+                    url('../img/baby-1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    padding: 0 2rem;
+  }
+
+  &__title {
+    font-size: 3.3rem;
+    font-weight: 700;
+    font-family: $font-secondary;
+
+  }
+
+  &__content-box {
+    position: absolute;
+    top: 30%;
+
+    max-width: 70rem;
+    padding: 0 2rem;
+  }
+
+  &__heading {
+    font-size: 4.8rem;
+  }
+
+  &__paragraph {
+    font-size: 2.1rem;
+  }
+
+  &__cta {
+
+  }
+}

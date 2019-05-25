@@ -1,0 +1,68 @@
+.nav {
+  font-size: 1.8rem;
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+  }
+
+  &__item {
+
+    &--contact {
+      position: relative;
+      margin-right: 2rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+
+      &:hover .nav__contact-box {
+        display: block;
+      }
+    }
+
+    i {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-left: .3rem;
+    }
+  }
+
+  &__cta {
+
+  }
+
+  &__contact-box {
+    display: none; // this will change upon hovering over the 'contact' li
+
+    position: absolute;
+    right: 0;
+    width: 30rem;
+    background-color: $color-white;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    color: $color-grey;
+    cursor: text;
+    animation: fadeIn .8s;
+  }
+
+  &__contact-email,
+  &__contact-phone {
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__contact-email {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  &__contact-phone {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+}
