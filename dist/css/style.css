@@ -22,6 +22,9 @@ body {
   font-size: 1.6rem;
   line-height: 1.4; }
 
+::selection {
+  background-color: rgba(62, 207, 142, 0.5); }
+
 .container {
   max-width: 120rem;
   margin: 0 auto; }
@@ -53,6 +56,9 @@ body {
   .btn--lg {
     font-size: 2.4rem;
     padding: 1.5rem 5rem; }
+    @media (max-width: 400px) {
+      .btn--lg {
+        padding: 1.5rem 3.5rem; } }
 
 .nav {
   font-size: 1.8rem; }
@@ -60,17 +66,29 @@ body {
     display: flex;
     align-items: center;
     list-style: none; }
-  .nav__item--contact {
-    position: relative;
-    margin-right: 2rem;
-    padding: 1rem 2rem;
-    cursor: pointer; }
-    .nav__item--contact:hover .nav__contact-box {
-      display: block; }
-  .nav__item i {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-left: .3rem; }
+  .nav__item {
+    font-weight: 500; }
+    .nav__item--contact {
+      position: relative;
+      margin-right: 2rem;
+      padding: 1rem 2rem;
+      cursor: pointer; }
+      @media (max-width: 900px) {
+        .nav__item--contact {
+          margin-right: 0rem; } }
+      @media (max-width: 400px) {
+        .nav__item--contact {
+          font-size: 1.6rem;
+          padding: 1rem 0rem; } }
+      .nav__item--contact:hover .nav__contact-box {
+        display: block; }
+    .nav__item i {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-left: .3rem; }
+  @media (max-width: 900px) {
+    .nav__cta {
+      display: none; } }
   .nav__contact-box {
     display: none;
     position: absolute;
@@ -81,11 +99,13 @@ body {
     margin-top: 1rem;
     color: #666;
     cursor: text;
-    animation: fadeIn .8s; }
+    z-index: 99;
+    animation: fadeIn .5s; }
   .nav__contact-email h3, .nav__contact-phone h3 {
     font-size: 1.6rem; }
   .nav__contact-email p, .nav__contact-phone p {
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    font-weight: 400; }
   .nav__contact-email {
     padding: 2rem 2rem 1rem 2rem; }
   .nav__contact-phone {
@@ -99,22 +119,79 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
+  @media (max-width: 900px) {
+    .home {
+      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-1b.jpg"); } }
+  @media (max-width: 400px) {
+    .home {
+      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-3.jpg"); } }
   .home__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
-    padding: 0 2rem; }
+    padding: 2rem; }
+    @media (max-width: 900px) {
+      .home__header {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #7e55bd;
+        padding: 1.5rem 2rem; } }
   .home__title {
     font-size: 3.3rem;
     font-weight: 700;
     font-family: "Lato", sans-serif; }
+    @media (max-width: 800px) {
+      .home__title {
+        font-size: 2.7rem; } }
+    @media (max-width: 600px) {
+      .home__title {
+        font-size: 2.4rem; } }
+    @media (max-width: 400px) {
+      .home__title {
+        font-size: 2.1rem; } }
+  .home__title-break {
+    display: none; }
+    @media (max-width: 600px) {
+      .home__title-break {
+        display: block; } }
   .home__content-box {
     position: absolute;
     top: 30%;
-    max-width: 70rem;
+    width: 100%;
+    max-width: 73rem;
     padding: 0 2rem; }
+    @media (max-width: 900px) {
+      .home__content-box {
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        text-align: center; } }
+    @media (max-width: 400px) {
+      .home__content-box {
+        padding: 0 1rem;
+        top: 22%; } }
   .home__heading {
-    font-size: 4.8rem; }
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 1rem; }
+    @media (max-width: 730px) {
+      .home__heading {
+        font-size: 4.5rem; } }
+    @media (max-width: 655px) {
+      .home__heading {
+        font-size: 4.1rem; } }
+    @media (max-width: 600px) {
+      .home__heading {
+        font-size: 4.4rem; } }
+    @media (max-width: 400px) {
+      .home__heading {
+        font-size: 3.6rem; } }
+  .home__heading-break {
+    display: none; }
+    @media (max-width: 600px) {
+      .home__heading-break {
+        display: block; } }
   .home__paragraph {
     font-size: 2.1rem; }
+    @media (max-width: 400px) {
+      .home__paragraph {
+        font-size: 2rem; } }

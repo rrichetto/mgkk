@@ -1,9 +1,7 @@
 .home {
   position: relative;
   height: 100vh;
-  // background-color: rgba($color-primary, 0.6);
   color: $color-white;
-
   background-image: linear-gradient(to right bottom,
                     rgba(126, 85, 189, .95) 0%,
                     rgba(126, 85, 189, .85) 30%,
@@ -13,12 +11,33 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @media (max-width: 900px) {
+    background-image: linear-gradient(to right bottom,
+                    rgba(126, 85, 189, .95) 0%,
+                    rgba(126, 85, 189, .85) 30%,
+                    rgba(45, 162, 197, 0.4)),
+                    url('../img/baby-1b.jpg');
+  }
+
+  @media (max-width: 400px) {
+    background-image: linear-gradient(to right bottom,
+                    rgba(126, 85, 189, .95) 0%,
+                    rgba(126, 85, 189, .85) 30%,
+                    rgba(45, 162, 197, 0.4)),
+                    url('../img/baby-3.jpg');
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
-    padding: 0 2rem;
+    padding: 2rem;
+
+    @media (max-width: 900px) {
+      background-color: rgba($color-white, 0.9);
+      color: rgb(126, 85, 189);
+      padding: 1.5rem 2rem;
+    }
   }
 
   &__title {
@@ -26,22 +45,72 @@
     font-weight: 700;
     font-family: $font-secondary;
 
+    @media (max-width: 800px) {
+      font-size: 2.7rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 2.4rem;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__title-break {
+    display: none;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
   }
 
   &__content-box {
     position: absolute;
     top: 30%;
-
-    max-width: 70rem;
+    width: 100%;
+    max-width: 73rem;
     padding: 0 2rem;
+
+    @media (max-width: 900px) {
+      left: 50%;
+      top: 20%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    @media (max-width: 400px) {
+      padding: 0 1rem;
+      top: 22%;
+    }
   }
 
   &__heading {
-    font-size: 4.8rem;
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+
+    @media (max-width: 730px) { font-size: 4.5rem; }
+    @media (max-width: 655px) { font-size: 4.1rem; }
+    @media (max-width: 600px) { font-size: 4.4rem; }
+    @media (max-width: 400px) { font-size: 3.6rem; }
+  }
+
+  &__heading-break {
+    display: none;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
   }
 
   &__paragraph {
     font-size: 2.1rem;
+
+    @media (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
 
   &__cta {

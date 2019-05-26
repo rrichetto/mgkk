@@ -1,0 +1,1 @@
+This repo contains the website for Maple Grove Kid Connection: https://www.maplegrovekidconnection.com/

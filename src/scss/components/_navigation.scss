@@ -9,12 +9,22 @@
   }
 
   &__item {
+    font-weight: 500;
 
     &--contact {
       position: relative;
       margin-right: 2rem;
       padding: 1rem 2rem;
       cursor: pointer;
+
+      @media (max-width: 900px) {
+        margin-right: 0rem;
+      }
+
+      @media (max-width: 400px) {
+        font-size: 1.6rem;
+        padding: 1rem 0rem;
+      }
 
       &:hover .nav__contact-box {
         display: block;
@@ -29,7 +39,9 @@
   }
 
   &__cta {
-
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
 
   &__contact-box {
@@ -43,7 +55,8 @@
     margin-top: 1rem;
     color: $color-grey;
     cursor: text;
-    animation: fadeIn .8s;
+    z-index: 99;
+    animation: fadeIn .5s;
   }
 
   &__contact-email,
@@ -55,6 +68,7 @@
 
     p {
       font-size: 1.6rem;
+      font-weight: 400;
     }
   }
 
