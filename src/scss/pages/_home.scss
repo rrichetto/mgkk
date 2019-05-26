@@ -56,6 +56,10 @@
     @media (max-width: 400px) {
       font-size: 2.1rem;
     }
+
+    @media (max-height: 600px) { // height
+      font-size: 1.8rem;
+    }
   }
 
   &__title-break {
@@ -84,6 +88,10 @@
       padding: 0 1rem;
       top: 22%;
     }
+
+    @media (max-height: 600px) { // height
+      top: 27%;
+    }
   }
 
   &__heading {
@@ -95,6 +103,7 @@
     @media (max-width: 655px) { font-size: 4.1rem; }
     @media (max-width: 600px) { font-size: 4.4rem; }
     @media (max-width: 400px) { font-size: 3.6rem; }
+    @media (max-height: 350px) { font-size: 3.2rem; } // height
   }
 
   &__heading-break {
@@ -108,8 +117,12 @@
   &__paragraph {
     font-size: 2.1rem;
 
-    @media (max-width: 400px) {
+    @media (max-width: 350px) {
       font-size: 2rem;
+    }
+
+    @media (max-height: 350px) { // height
+      font-size: 1.8rem;
     }
   }
 
