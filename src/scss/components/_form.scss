@@ -1,0 +1,102 @@
+.form {
+
+  &__content-box {
+    color: black;
+    font-size: 4rem;
+  }
+
+  &__section {
+    height: 3rem;
+
+    &--1 {
+      
+    }
+    &--2 {
+      display: none;
+    }
+    &--3 {
+      display: none;
+    }
+  }
+
+  &__progress {
+    position: absolute;
+    left: 50%;
+    top: 3rem;
+    transform: translateX(-50%);
+    padding: 1rem 0;
+    width: 6rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__dot {
+    border-radius: 50%;
+
+    &--1 {
+      height: 1.75rem;
+      width: 1.75rem;
+      background-color: $color-primary;
+    }
+
+    &--2,
+    &--3 {
+      height: 1.25rem;
+      width: 1.25rem;
+      background-color: lighten($color-primary, 25%);
+    }
+  }
+
+
+  &__prev,
+  &__next {
+    position: absolute;
+    bottom: 3rem;
+
+    i {
+      color: $color-primary;
+      font-size: 4.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__prev {
+    left: 5rem;
+    display: none; // at first, the form shows no 'previous' button
+  }
+
+  &__next {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__submit {
+    display: none; // at first, the form shows no 'submit' button. Later, we display it as 'inline-block'
+
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+
+    font-size: 2rem;
+    font-family: inherit;
+    color: $color-white;
+    background-color: $color-primary;
+    border-radius: 10rem;
+    padding: 1rem 4rem;
+    transition: all .2s;
+    font-weight: 500;
+    outline: none;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken($color-primary, 10%);
+    }
+  }
+}

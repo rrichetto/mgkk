@@ -46,8 +46,10 @@ body {
   padding: 1rem 2rem;
   text-decoration: none;
   transition: all .2s;
-  font-weight: 500; }
+  font-weight: 500;
+  outline: none; }
   .btn:hover {
+    cursor: pointer;
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:active {
@@ -59,6 +61,108 @@ body {
     @media (max-width: 400px) {
       .btn--lg {
         padding: 1.5rem 3.5rem; } }
+
+.form__content-box {
+  color: black;
+  font-size: 4rem; }
+
+.form__section {
+  height: 3rem; }
+  .form__section--2 {
+    display: none; }
+  .form__section--3 {
+    display: none; }
+
+.form__progress {
+  position: absolute;
+  left: 50%;
+  top: 3rem;
+  transform: translateX(-50%);
+  padding: 1rem 0;
+  width: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.form__dot {
+  border-radius: 50%; }
+  .form__dot--1 {
+    height: 1.75rem;
+    width: 1.75rem;
+    background-color: #3ecf8e; }
+  .form__dot--2, .form__dot--3 {
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: #a4e8ca; }
+
+.form__prev, .form__next {
+  position: absolute;
+  bottom: 3rem; }
+  .form__prev i, .form__next i {
+    color: #3ecf8e;
+    font-size: 4.5rem; }
+    .form__prev i:hover, .form__next i:hover {
+      cursor: pointer; }
+
+.form__prev {
+  left: 5rem;
+  display: none; }
+
+.form__next {
+  left: 50%;
+  transform: translateX(-50%); }
+
+.form__submit {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-family: inherit;
+  color: #fff;
+  background-color: #3ecf8e;
+  border-radius: 10rem;
+  padding: 1rem 4rem;
+  transition: all .2s;
+  font-weight: 500;
+  outline: none;
+  border: none; }
+  .form__submit:hover {
+    cursor: pointer;
+    background-color: #2baf74; }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7); }
+  .modal__content-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 50rem;
+    height: 40rem;
+    background-color: azure;
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    transform: translate(-50%, -50%);
+    animation: fadeIn .4s; }
+  .modal__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem; }
+    .modal__close i {
+      color: #666;
+      font-size: 3.5rem; }
+      .modal__close i:hover {
+        cursor: pointer;
+        color: red; }
 
 .nav {
   font-size: 1.8rem; }
@@ -100,7 +204,7 @@ body {
     color: #666;
     cursor: text;
     z-index: 99;
-    animation: fadeIn .5s; }
+    animation: fadeIn .4s; }
   .nav__contact-email h3, .nav__contact-phone h3 {
     font-size: 1.6rem; }
   .nav__contact-email p, .nav__contact-phone p {
