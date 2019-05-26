@@ -41,7 +41,7 @@ body {
 .btn {
   display: inline-block;
   color: #fff;
-  background-color: #3ecf8e;
+  background-color: #3ECF8E;
   border-radius: 10rem;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -89,28 +89,31 @@ body {
   .form__dot--1 {
     height: 1.75rem;
     width: 1.75rem;
-    background-color: #3ecf8e; }
+    background-color: #3ECF8E; }
   .form__dot--2, .form__dot--3 {
     height: 1.25rem;
     width: 1.25rem;
-    background-color: #a4e8ca; }
+    background-color: #97ECC6; }
 
 .form__prev, .form__next {
   position: absolute;
-  bottom: 3rem; }
+  bottom: 3rem;
+  transition: all .2s; }
+  .form__prev:hover, .form__next:hover {
+    cursor: pointer;
+    transform: scale(1.1); }
+  .form__prev:active, .form__next:active {
+    transform: scale(1); }
   .form__prev i, .form__next i {
-    color: #3ecf8e;
+    color: #3ECF8E;
     font-size: 4.5rem; }
-    .form__prev i:hover, .form__next i:hover {
-      cursor: pointer; }
 
 .form__prev {
   left: 5rem;
   display: none; }
 
 .form__next {
-  left: 50%;
-  transform: translateX(-50%); }
+  right: 5rem; }
 
 .form__submit {
   display: none;
@@ -121,7 +124,7 @@ body {
   font-size: 2rem;
   font-family: inherit;
   color: #fff;
-  background-color: #3ecf8e;
+  background-color: #3ECF8E;
   border-radius: 10rem;
   padding: 1rem 4rem;
   transition: all .2s;
