@@ -67,16 +67,34 @@ body {
   font-size: 4rem; }
 
 .form__section {
-  height: 3rem; }
+  width: 100%;
+  height: 100%;
+  text-align: center; }
   .form__section--2 {
     display: none; }
   .form__section--3 {
     display: none; }
 
+.form__label {
+  font-size: 1.6rem; }
+
+.form__text-input {
+  display: block;
+  font-size: 1.6rem;
+  color: #666;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 90%;
+  border: 2px solid #3ECF8E;
+  border-radius: 1rem;
+  outline: none; }
+
 .form__progress {
   position: absolute;
   left: 50%;
-  top: 3rem;
+  top: 2rem;
   transform: translateX(-50%);
   padding: 1rem 0;
   width: 6rem;
@@ -136,7 +154,6 @@ body {
     background-color: #2baf74; }
 
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -148,12 +165,12 @@ body {
     position: relative;
     top: 50%;
     left: 50%;
-    width: 50%;
-    max-width: 50rem;
+    width: 96%;
+    max-width: 45rem;
     height: 40rem;
-    background-color: azure;
+    background-color: #fff;
     border-radius: 1.5rem;
-    padding: 3rem 2rem;
+    padding: 5rem 2rem;
     transform: translate(-50%, -50%);
     animation: fadeIn .4s; }
   .modal__close {

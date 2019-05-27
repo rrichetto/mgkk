@@ -1,5 +1,5 @@
 .modal {
-  display: none;
+  // display: none;
 
   position: fixed;
   top: 0;
@@ -13,12 +13,12 @@
     position: relative;
     top: 50%;
     left: 50%;
-    width: 50%;
-    max-width: 50rem;
+    width: 96%;
+    max-width: 45rem;
     height: 40rem;
-    background-color: azure;
+    background-color: $color-white;
     border-radius: 1.5rem;
-    padding: 3rem 2rem;
+    padding: 5rem 2rem;
     transform: translate(-50%, -50%);
     animation: fadeIn .4s;
   }
