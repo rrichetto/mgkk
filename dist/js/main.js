@@ -36,6 +36,8 @@ const progressEl = document.querySelector('.form__progress');
 const dotEls = document.querySelectorAll('.form__dot');
 const submitEl = document.querySelector('.form__submit');
 const confirmationEl = document.querySelector('.form__confirmation');
+const emailInputEl = document.querySelector('.form__email');
+const errorEl = document.querySelector('.form__error');
 
 let currentSection = 0;
 
@@ -49,7 +51,9 @@ prevBtnEl.addEventListener('click', _ => {
   showSection();
 });
 
-submitEl.addEventListener('click', showConfirmation);
+submitEl.addEventListener('click', checkIfValid);
+
+emailInputEl.addEventListener('keyup', redBorder);
 
 
 function showSection() {
@@ -104,4 +108,34 @@ function showConfirmation() {
   submitEl.style.display = 'none';
 
   confirmationEl.style.display = 'block';
+}
+
+function checkIfValid(e) {
+  if (!validateEmail()) {
+    showError();
+    e.preventDefault();
+  } else {
+    showConfirmation();
+  }
+}
+
+function validateEmail() {
+  const regEx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  return regEx.test(emailInputEl.value);
+}
+
+function redBorder() {
+  if (!validateEmail()) {
+    emailInputEl.style.border = '2px solid red';
+  } else {
+    emailInputEl.style.border = 'none';
+  }
+}
+
+function showError() {
+  errorEl.style.display = 'block';
+
+  setTimeout(_ => {
+    errorEl.style.display = 'none';
+  }, 3000);
 }

@@ -54,6 +54,16 @@
     resize: none;
   }
 
+  &__error {
+    text-align: center;
+    display: none;
+  }
+
+  &__error-message {
+    font-size: 1.8rem;
+    color: red;
+  }
+
   &__confirmation {
     text-align: center;
     display: none;
@@ -120,10 +130,18 @@
   &__prev {
     left: 5rem;
     display: none; // at first, the form shows no 'previous' button
+
+    @media (max-width: 400px) {
+      left: 2rem
+    }
   }
 
   &__next {
     right: 5rem;
+
+    @media (max-width: 400px) {
+      right: 2rem
+    }
   }
 
   &__submit {

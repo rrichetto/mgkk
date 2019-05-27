@@ -101,6 +101,14 @@ body {
   height: 12rem;
   resize: none; }
 
+.form__error {
+  text-align: center;
+  display: none; }
+
+.form__error-message {
+  font-size: 1.8rem;
+  color: red; }
+
 .form__confirmation {
   text-align: center;
   display: none; }
@@ -148,9 +156,15 @@ body {
 .form__prev {
   left: 5rem;
   display: none; }
+  @media (max-width: 400px) {
+    .form__prev {
+      left: 2rem; } }
 
 .form__next {
   right: 5rem; }
+  @media (max-width: 400px) {
+    .form__next {
+      right: 2rem; } }
 
 .form__submit {
   display: none;
@@ -187,7 +201,7 @@ body {
     left: 50%;
     width: 96%;
     max-width: 45rem;
-    height: 40rem;
+    height: 42rem;
     background-color: #fff;
     border-radius: 1.5rem;
     padding: 7rem 2rem;
