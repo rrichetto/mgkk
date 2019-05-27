@@ -11,7 +11,7 @@ modalTriggerEls.forEach(elem => {
 
 modalCloseEl.addEventListener('click', closeModal);
 
-window.addEventListener('click', e => {
+window.addEventListener('mousedown', e => {
   if (e.target === modalEl) {
     closeModal();
   }
@@ -32,22 +32,27 @@ function closeModal() {
 const prevBtnEl = document.querySelector('.form__prev');
 const nextBtnEl = document.querySelector('.form__next');
 const sectionEls = document.querySelectorAll('.form__section');
+const progressEl = document.querySelector('.form__progress');
 const dotEls = document.querySelectorAll('.form__dot');
 const submitEl = document.querySelector('.form__submit');
+const confirmationEl = document.querySelector('.form__confirmation');
 
 let currentSection = 0;
 
 nextBtnEl.addEventListener('click', _ => {
   currentSection++;
-  displaySection();
+  showSection();
 });
 
 prevBtnEl.addEventListener('click', _ => {
   currentSection--;
-  displaySection();
+  showSection();
 });
 
-function displaySection() {
+submitEl.addEventListener('click', showConfirmation);
+
+
+function showSection() {
   sectionEls.forEach((section, index) => {
     if (index === currentSection) {
       section.style.display = 'block';
@@ -90,4 +95,13 @@ function showDots() {
       dot.style.backgroundColor = '#97ECC6';
     }
   })
+}
+
+function showConfirmation() {
+  sectionEls[2].style.display = 'none';
+  progressEl.style.display = 'none';
+  prevBtnEl.style.display = 'none';
+  submitEl.style.display = 'none';
+
+  confirmationEl.style.display = 'block';
 }

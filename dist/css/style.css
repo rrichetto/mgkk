@@ -63,33 +63,52 @@ body {
         padding: 1.5rem 3.5rem; } }
 
 .form__content-box {
-  color: black;
-  font-size: 4rem; }
+  color: #000; }
 
 .form__section {
   width: 100%;
-  height: 100%;
-  text-align: center; }
+  height: 100%; }
   .form__section--2 {
     display: none; }
   .form__section--3 {
     display: none; }
 
 .form__label {
-  font-size: 1.6rem; }
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: .5rem; }
 
 .form__text-input {
   display: block;
-  font-size: 1.6rem;
-  color: #666;
+  font-size: 1.4rem;
+  color: #7285dd;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
-  padding: 1rem;
-  margin: 2rem auto;
-  width: 90%;
-  border: 2px solid #3ECF8E;
-  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin: 0rem auto 2rem auto;
+  width: 100%;
+  background-color: #f1f2fc;
+  border: none;
+  border-radius: 1.5rem;
   outline: none; }
+  .form__text-input:focus::placeholder {
+    color: transparent; }
+  .form__text-input::placeholder {
+    color: #b3b3b3; }
+
+.form__details {
+  height: 12rem;
+  resize: none; }
+
+.form__confirmation {
+  text-align: center;
+  display: none; }
+
+.form__confirmation-message {
+  font-size: 2.5rem;
+  color: #3ECF8E;
+  font-weight: bold; }
 
 .form__progress {
   position: absolute;
@@ -115,7 +134,7 @@ body {
 
 .form__prev, .form__next {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   transition: all .2s; }
   .form__prev:hover, .form__next:hover {
     cursor: pointer;
@@ -137,7 +156,7 @@ body {
   display: none;
   position: absolute;
   left: 50%;
-  bottom: 3rem;
+  bottom: 2rem;
   transform: translateX(-50%);
   font-size: 2rem;
   font-family: inherit;
@@ -154,6 +173,7 @@ body {
     background-color: #2baf74; }
 
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -170,7 +190,7 @@ body {
     height: 40rem;
     background-color: #fff;
     border-radius: 1.5rem;
-    padding: 5rem 2rem;
+    padding: 7rem 2rem;
     transform: translate(-50%, -50%);
     animation: fadeIn .4s; }
   .modal__close {

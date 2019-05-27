@@ -1,5 +1,5 @@
 .modal {
-  // display: none;
+  display: none;
 
   position: fixed;
   top: 0;
@@ -18,7 +18,7 @@
     height: 40rem;
     background-color: $color-white;
     border-radius: 1.5rem;
-    padding: 5rem 2rem;
+    padding: 7rem 2rem;
     transform: translate(-50%, -50%);
     animation: fadeIn .4s;
   }
