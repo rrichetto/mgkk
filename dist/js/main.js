@@ -32,18 +32,30 @@ function closeModal() {
 const prevBtnEl = document.querySelector('.form__prev');
 const nextBtnEl = document.querySelector('.form__next');
 const sectionEls = document.querySelectorAll('.form__section');
+const sectionOneInputEls = document.querySelectorAll('.form__section--1 .form__text-input');
+const sectionTwoInputEls = document.querySelectorAll('.form__section--2 .form__text-input');
 const progressEl = document.querySelector('.form__progress');
 const dotEls = document.querySelectorAll('.form__dot');
 const submitEl = document.querySelector('.form__submit');
 const confirmationEl = document.querySelector('.form__confirmation');
+const confirmationCloseEl = document.querySelector('.form__confirmation-close');
 const emailInputEl = document.querySelector('.form__email');
 const errorEl = document.querySelector('.form__error');
 
 let currentSection = 0;
 
 nextBtnEl.addEventListener('click', _ => {
-  currentSection++;
-  showSection();
+  if (currentSection === 0) {
+    if (validateSection(sectionOneInputEls)) {
+      currentSection++;
+      showSection();
+    }
+  } else if (currentSection === 1) {
+      if(validateSection(sectionTwoInputEls)) {
+        currentSection++;
+        showSection();
+    }
+  }
 });
 
 prevBtnEl.addEventListener('click', _ => {
@@ -51,10 +63,25 @@ prevBtnEl.addEventListener('click', _ => {
   showSection();
 });
 
-submitEl.addEventListener('click', checkIfValid);
-
 emailInputEl.addEventListener('keyup', redBorder);
 
+confirmationCloseEl.addEventListener('click', closeConfirmation);
+
+
+
+function validateSection(section) {
+  let numErrors = 0;
+
+  section.forEach(input => {
+    // If either the input is blank, or the email is invalid, show an error
+    if (input.value === '' || !validateEmail()) {
+      numErrors++;
+      showError();
+    }
+  });
+
+  return numErrors > 0 ? false : true;
+}
 
 function showSection() {
   sectionEls.forEach((section, index) => {
@@ -101,24 +128,6 @@ function showDots() {
   })
 }
 
-function showConfirmation() {
-  sectionEls[2].style.display = 'none';
-  progressEl.style.display = 'none';
-  prevBtnEl.style.display = 'none';
-  submitEl.style.display = 'none';
-
-  confirmationEl.style.display = 'block';
-}
-
-function checkIfValid(e) {
-  if (!validateEmail()) {
-    showError();
-    e.preventDefault();
-  } else {
-    showConfirmation();
-  }
-}
-
 function validateEmail() {
   const regEx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
   return regEx.test(emailInputEl.value);
@@ -137,5 +146,9 @@ function showError() {
 
   setTimeout(_ => {
     errorEl.style.display = 'none';
-  }, 3000);
+  }, 2500);
+}
+
+function closeConfirmation() {
+  confirmationEl.style.display = 'none';
 }

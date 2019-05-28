@@ -108,15 +108,41 @@ body {
 .form__error-message {
   font-size: 1.8rem;
   color: red; }
+  @media (max-width: 350px) {
+    .form__error-message {
+      font-size: 1.6rem; } }
 
 .form__confirmation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96%;
+  max-width: 45rem;
+  height: 30rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  transform: translate(-50%, -50%);
   text-align: center;
-  display: none; }
+  z-index: 999; }
 
 .form__confirmation-message {
   font-size: 2.5rem;
   color: #3ECF8E;
   font-weight: bold; }
+
+.form__confirmation-close {
+  position: relative;
+  top: -1.5rem;
+  left: 90%;
+  width: 5rem;
+  height: 5rem; }
+  .form__confirmation-close i {
+    color: #666;
+    font-size: 3.5rem; }
+    .form__confirmation-close i:hover {
+      cursor: pointer;
+      color: red; }
 
 .form__progress {
   position: absolute;
@@ -188,6 +214,7 @@ body {
 
 .modal {
   display: none;
+  overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -207,6 +234,15 @@ body {
     padding: 7rem 2rem;
     transform: translate(-50%, -50%);
     animation: fadeIn .4s; }
+    @media (max-height: 440px) {
+      .modal__content-box {
+        top: 55%; } }
+    @media (max-height: 400px) {
+      .modal__content-box {
+        top: 60%; } }
+    @media (max-height: 350px) {
+      .modal__content-box {
+        top: 65%; } }
   .modal__close {
     position: absolute;
     top: 1.5rem;

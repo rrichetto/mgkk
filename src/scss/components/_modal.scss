@@ -1,5 +1,6 @@
 .modal {
   display: none;
+  overflow: auto;
 
   position: fixed;
   top: 0;
@@ -21,6 +22,18 @@
     padding: 7rem 2rem;
     transform: translate(-50%, -50%);
     animation: fadeIn .4s;
+
+    @media (max-height: 440px) {
+      top: 55%;
+    }
+
+    @media (max-height: 400px) {
+      top: 60%;
+    }
+
+    @media (max-height: 350px) {
+      top: 65%;
+    }
   }
 
   &__close {
