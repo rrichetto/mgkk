@@ -25,6 +25,20 @@ function closeModal() {
   modalEl.style.display = 'none';
 }
 
+/***************
+  Contact Menu
+****************/
+const contactEl = document.querySelector('.nav__item--contact');
+const contactInfoEl = document.querySelector('.nav__contact-box');
+
+contactEl.addEventListener('click', (e) => {
+  if (contactInfoEl.style.display === 'block') {
+    contactInfoEl.style.display = 'none';
+  } else {
+    contactInfoEl.style.display = 'block';
+  }
+})
+
 
 /*********
   Form

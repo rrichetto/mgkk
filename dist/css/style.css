@@ -226,7 +226,7 @@ body {
     position: relative;
     top: 50%;
     left: 50%;
-    width: 96%;
+    width: 92%;
     max-width: 45rem;
     height: 42rem;
     background-color: #fff;
@@ -274,8 +274,6 @@ body {
         .nav__item--contact {
           font-size: 1.6rem;
           padding: 1rem 0rem; } }
-      .nav__item--contact:hover .nav__contact-box {
-        display: block; }
     .nav__item i {
       font-size: 1.2rem;
       font-weight: bold;
@@ -309,16 +307,16 @@ body {
   position: relative;
   height: 100vh;
   color: #fff;
-  background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-1-1.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-1-resized.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
   @media (max-width: 900px) {
     .home {
-      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-1b-1.jpg"); } }
+      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-1b-resized.jpg"); } }
   @media (max-width: 400px) {
     .home {
-      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-3-1.jpg"); } }
+      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-3-resized.jpg"); } }
   .home__header {
     display: flex;
     justify-content: space-between;
