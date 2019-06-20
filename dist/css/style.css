@@ -309,16 +309,16 @@ body {
   position: relative;
   height: 100vh;
   color: #fff;
-  background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-1.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-1-1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
   @media (max-width: 900px) {
     .home {
-      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-1b.jpg"); } }
+      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-1b-1.jpg"); } }
   @media (max-width: 400px) {
     .home {
-      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-3.jpg"); } }
+      background-image: linear-gradient(to right bottom, rgba(126, 85, 189, 0.95) 0%, rgba(126, 85, 189, 0.85) 30%, rgba(45, 162, 197, 0.4)), url("../img/baby-3-1.jpg"); } }
   .home__header {
     display: flex;
     justify-content: space-between;
